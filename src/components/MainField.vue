@@ -1,11 +1,13 @@
 <script setup>
 import { reactive } from "vue";
 import TargetItem from "./TargetItem.vue";
+import { useSessionStore } from "../stores/session";
+
+const sessionStore = useSessionStore();
 
 const fieldState = reactive({
   activeSession: false,
   visibleTarget: false,
-  points: [],
 });
 
 function delayAppearance() {
@@ -22,11 +24,11 @@ function handleTargetHit(time) {
   fieldState.visibleTarget = false;
 
   if (time == -1) {
-    fieldState.points.push(1000);
+    sessionStore.addHitTime(1000);
   } else {
-    fieldState.points.push(time);
+    sessionStore.addHitTime(time);
   }
-  if (fieldState.points.length == 2) {
+  if (sessionStore.playerScores.length == 2) {
     console.log("!!!!!!!");
     endSession();
     return null;
@@ -37,6 +39,7 @@ function handleTargetHit(time) {
 
 function startSession() {
   fieldState.activeSession = true;
+  sessionStore.clearPlayerScore();
   timer = delayAppearance();
   console.log("Show target");
 }
@@ -45,7 +48,7 @@ function endSession() {
   fieldState.visibleTarget = false;
   fieldState.activeSession = false;
   clearInterval(timer);
-  console.log("Session ended", fieldState.points);
+  console.log("Session ended", sessionStore.playerScores);
 }
 </script>
 
@@ -67,14 +70,11 @@ passing function to children comp (aka react style)
     />
     <div>Click on field to start</div>
   </div>
-  <button @click="endSession">Stop Session</button>
+  <!-- <button @click="endSession">Stop Session</button> -->
 </template>
 
 <style scoped>
 #field {
-  display: inline-block;
-  width: 400px;
-  height: 400px;
   background-color: var(--main-blue);
 }
 </style>

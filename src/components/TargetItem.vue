@@ -10,6 +10,7 @@ const props = defineProps({
     default: false,
   },
 });
+
 const isWaiting = ref(false);
 const resTime = ref(0);
 
@@ -46,7 +47,6 @@ function handleClick() {
   resTime.value = endPoint - startPoint;
   console.log(" Clicked from child comp ");
 }
-
 </script>
 
 $emit('disableTarget', 10) - emmits 'disableTarget' and reactionTime event or
@@ -54,7 +54,7 @@ timeLimit and time when target clicked to parent component
 <template>
   <div
     id="target"
-    @click="handleClick(), $emit('disableTarget', resTime)"
+    @click="handleClick(), $emit('disable-target', resTime)"
     :class="{ isWaiting: isWaiting }"
     v-show="props.activeTarget"
   ></div>
