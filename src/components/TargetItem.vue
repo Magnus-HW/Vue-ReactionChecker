@@ -67,7 +67,7 @@ timeLimit and time when target clicked to parent component
   background-color: var(--secondary-red);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
 }

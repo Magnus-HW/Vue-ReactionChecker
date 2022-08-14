@@ -1,15 +1,19 @@
 <script setup>
 import MainField from "./MainField.vue";
 import SessionBoard from "./SessionBoard.vue";
-import ScoreBoard from "./ScoreBoard.vue";
+import LeaderBoard from "./Leaderboard/LeaderBoard.vue";
+import LoginForm from "./LoginForm.vue";
 </script>
 
 <template>
-  <div id="reaction-test">
+  <div id="reaction-test-app">
     <h2 id="header">ReactionTest</h2>
-    <SessionBoard />
-    <MainField />
-    <ScoreBoard />
+    <div id="reaction-test">
+      <SessionBoard />
+      <MainField />
+      <LeaderBoard />
+    </div>
+    <LoginForm />
   </div>
 </template>
 

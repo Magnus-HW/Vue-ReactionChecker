@@ -1,0 +1,15 @@
+###
+GET http://localhost:3001/leaderboard/
+
+###
+DELETE http://localhost:3001/leaderboard/10
+
+###
+POST http://localhost:3001/leaderboard/
+Content-Type: application/json
+
+{
+  "name": "Test",
+  "country": "Finland",
+  "score": 0.1
+}

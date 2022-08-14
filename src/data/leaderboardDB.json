@@ -1,0 +1,64 @@
+{
+  "leaderboard": [
+    {
+      "id": 0,
+      "playerName": "Magnus",
+      "country": "Finland",
+      "score": 0.9221
+    },
+    {
+      "id": 1,
+      "playerName": "Kraken",
+      "country": "US",
+      "score": 0.9232
+    },
+    {
+      "playerName": "Karak",
+      "country": "Iran",
+      "score": 0.922,
+      "id": 9
+    },
+    {
+      "playerName": "Kat",
+      "country": "Iran",
+      "score": 0.922,
+      "id": 10
+    },
+    {
+      "playerName": "Kakurt",
+      "country": "Iran",
+      "score": 0.36,
+      "id": 13
+    },
+    {
+      "playerName": "Kekis",
+      "country": "Iran",
+      "score": 0.91875,
+      "id": 15
+    },
+    {
+      "playerName": "Kekis",
+      "country": "Iran",
+      "score": 0.3155,
+      "id": 18
+    },
+    {
+      "playerName": "Kek",
+      "country": "Iran",
+      "score": 0.3695,
+      "id": 19
+    },
+    {
+      "playerName": "Keks",
+      "country": "Iran",
+      "score": 0.45699999999999996,
+      "id": 20
+    },
+    {
+      "playerName": "Kekis",
+      "country": "Iran",
+      "score": 0.26849999999999996,
+      "id": 21
+    }
+  ]
+}
